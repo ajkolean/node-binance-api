@@ -47,6 +47,9 @@ module.exports = function() {
             method: method,
             timeout: options.recvWindow,
             agent: false,
+            pool: {
+              maxSockets: Infinity
+            },
             headers: {
                 'User-Agent': userAgent,
                 'Content-type': contentType
